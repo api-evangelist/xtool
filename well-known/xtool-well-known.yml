@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of xtool.com hosts (www.xtool.com, api.xtool.com, support.xtool.com)
+note: >-
+  www.xtool.com is a Shopify storefront (makeblock-xtool.myshopify.com); the OIDC and
+  OAuth authorization-server discovery documents it serves resolve to Shopify customer
+  accounts (issuer https://shopify.com/authentication/46779859095), not an xTool
+  first-party identity provider. api.xtool.com resolves (Azure) but serves no public
+  discovery surface (404 on all probed paths). Storefront paths intermittently
+  returned 503 (rate limiting) during the probe window.
+hosts:
+- host: https://www.xtool.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: xtool-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: xtool-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 503
+- host: https://api.xtool.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://support.xtool.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404

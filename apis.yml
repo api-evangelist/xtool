@@ -1,9 +1,25 @@
 aid: xtool
 name: xTool
-description: 'xTool is a company surfaced as a portfolio company of hongshan and added to the API Evangelist
-  network as a stub for enrichment. Sector: technology. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  xTool is a Shenzhen-based digital-fabrication brand, spun out of Makeblock and backed
+  by HongShan, making CO2, fiber, and diode laser cutters and engravers, laser welders,
+  and DTF printers for makers and small businesses, driven by its xTool Creative Space
+  (XCS) desktop software. xTool sells through a Shopify storefront and runs a support
+  and academy portal, a user community, and the Atomm maker-project platform, but
+  publishes no public developer API, SDK, or API documentation.
 url: https://raw.githubusercontent.com/api-evangelist/xtool/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.xtool.com/cdn/shop/files/20250416-174018_1200x1200.jpg?v=1744796685
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +28,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Technology
+- Hardware
+- Laser Engraving
+- Laser Cutting
+- Digital Fabrication
+- Manufacturing
+- Maker
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +45,32 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/xtool-domain-security.yml
 - type: Website
   url: https://xtool.com
+- type: Blog
+  url: https://www.xtool.com/blogs/all
+- type: BlogRSS
+  url: https://www.xtool.com/blogs/all.atom
+- type: Support
+  url: https://support.xtool.com/
+- type: Community
+  url: https://community.xtool.com/
+- type: Login
+  url: https://www.xtool.com/account
+- type: TermsOfService
+  url: https://www.xtool.com/pages/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.xtool.com/policies/privacy-policy
+- type: AboutUs
+  url: https://www.xtool.com/pages/about-us
+- type: WellKnown
+  url: well-known/xtool-well-known.yml
+- type: LLMsTxt
+  url: llms/xtool-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
